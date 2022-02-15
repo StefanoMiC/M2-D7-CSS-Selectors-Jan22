@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity</title>
+    <style>
+        h2 {
+            color: palevioletred !important;
+        }
+
+        h2 span {
+            color: plum !important;
+
+        }
+
+        h2.title.title-sm {
+            color: palegreen;
+        }
+
+        button.btn.btn-primary span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="myTitle" class="title"><span>I'm the first title</span></h2>
+    <h2 id="myTitle" class="title">I'm the second title</h2>
+
+
+</body>
+
+</html>

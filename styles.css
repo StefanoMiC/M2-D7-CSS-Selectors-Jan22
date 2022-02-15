@@ -1,0 +1,175 @@
+#first > div > div:not(.elementIWant) {
+  border: 2px solid crimson;
+}
+
+#first > ul > li > ul > li {
+  border: 2px solid cornflowerblue;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active {
+  background-color: red;
+}
+
+#third .box > p {
+  color: red;
+}
+
+#fourth > div > div + p {
+  border: 2px solid red;
+}
+/* 
+#fourth > div > div > h2 + p {
+  font-style: italic;
+} */
+#fourth .divIWant h2 + p + p {
+  font-style: italic;
+  color: blue;
+}
+
+#fourth .col-12 .box + .box {
+  background-color: peachpuff;
+}
+
+#fifth p ~ ul:not(span + ul) {
+  border: 2px solid salmon;
+}
+
+#fifth .col-12 .box ~ .box {
+  background-color: peachpuff;
+}
+
+/* #sixth input[placeholder*="name" i] {
+    border-color: red;
+} */
+#sixth input[placeholder$="name" i] {
+  border-color: red;
+}
+
+#sixth input[class|="form"] {
+  border-color: blue;
+}
+
+#sixth input[placeholder~="username" i] {
+  border-color: red;
+}
+
+#sixth input:checked {
+  width: 3rem;
+  height: 3rem;
+}
+
+#sixth input[type="checkbox"] {
+  margin-left: 12px;
+}
+
+#seventh a[href^="https"] {
+  color: green;
+}
+#seventh a[href^="http://"]
+{
+  color: red;
+}
+#seventh a[href$=".png"],
+#seventh a[href$=".jpg"],
+#seventh a[href$=".gif"] {
+  color: blue;
+}
+
+/* #eigth > div:nth-child(4),
+#eigth > div:first-child,
+#eigth > div:last-child {
+  background-color: red !important;
+} */
+
+/* #eigth > div:nth-child(3n + 5) {
+  background-color: red !important;
+} */
+/* #eigth > div:nth-last-child(3n + 5) {
+  background-color: red !important;
+} */
+
+#eigth > div:nth-of-type(3) {
+  background-color: red !important;
+}
+#eigth > div:last-of-type {
+  background-color: red !important;
+}
+
+#eigth > div:only-child {
+  background-color: blue !important;
+}
+
+body > div:first-of-type > div:nth-of-type(3) > div:first-of-type > div > div > div > div:first-of-type {
+  background-color: blue;
+}
+
+.border-crimson {
+  border-color: crimson !important;
+}
+
+#ninth {
+  position: relative;
+  z-index: 0;
+}
+
+#ninth .box {
+  position: relative;
+}
+
+#ninth .box.show::before,
+#ninth .box:hover::before {
+  content: "";
+  font-weight: bolder;
+
+  position: absolute;
+  background-color: greenyellow;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  z-index: -1;
+  filter: blur(40px);
+}
+
+/* #ninth .box::after {
+  content: "";
+  font-weight: bolder;
+
+  position: absolute;
+  background-color: palevioletred;
+  width: 100%;
+  height: 100%;
+
+  right: -100px;
+  bottom: -30px;
+} */
+
+/* #ninth .box::after {
+  content: ">>";
+  font-weight: bolder;
+  color: red;
+} */
+
+.img-wrapper {
+  position: relative;
+}
+
+.img-wrapper p {
+  position: absolute;
+  bottom: 9px;
+  left: 10px;
+  margin-bottom: 0;
+}
+
+.img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.3) 100%);
+}
